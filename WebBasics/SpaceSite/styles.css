@@ -1,0 +1,26 @@
+body{
+  background-color: rgba(0, 0, 0, 0.436);
+  background-image: url("imageone.jpg");
+  background-size: cover;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+
+.header{
+font-size: 50px;
+  color: rgba(255, 255, 255, 0.733);
+  display: block;
+text-align: center;
+}
+
+button{
+
+  background: none;
+  border: 1px solid white;
+  color: azure;
+  font-size: 18px;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100px;
+}
