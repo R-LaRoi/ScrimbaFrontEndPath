@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Scoreboard</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <h3>SIBEBE</h3>
+        <div id="home-score">0</div>
+        <span>
+          <button onclick="addOne()">+1</button>
+          <button onclick="addTwo()">+2</button>
+          <button onclick="addThree()">+3</button>
+        </span>
+      </div>
+
+      <div class="container">
+        <h3>MAPUTO</h3>
+        <div id="guest-score">0</div>
+        <span>
+          <button onclick="addOneGuest()">+1</button>
+          <button onclick="addTwoGuest()">+2</button>
+          <button onclick="addThreeGuest()">+3</button>
+        </span>
+      </div>
+    <button id="play-btn" onclick="playAgain()"> PLAY AGAIN </button>
+
+
+  </body>
+  <script src="index.js"></script>
+</html>
