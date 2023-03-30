@@ -4,16 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Didact+Gothic&family=Roboto+Flex:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    />
     <link rel="stylesheet" href="styles.css" />
+
     <title>PasswordGenerator</title>
   </head>
   <body>
     <div class="card">
-      <h1>Using the same password for everything?</h1>
-      <h4>Generate your super random new password here!</h4>
-      <button class="btn-one" id="generate-btn" onclick="generatePassword()">
+      <h1>
+        Using the <br />
+        <span style="color: #f59e0b"> same password </span> <br />for
+        everything?
+      </h1>
+      <h4>Generate a new super random password here!</h4>
+      <button id="generate-btn" onclick="showPassword()">
         Generate Password
       </button>
+      <hr />
       <div class="password-one" id="pwd-one"></div>
       <div class="password-two" id="pwd-two"></div>
     </div>

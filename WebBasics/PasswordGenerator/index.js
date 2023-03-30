@@ -94,18 +94,22 @@ let characters = [
 
 let pwdLength = 12;
 
-function generatePassword() {
-  let password = "";
-  for (i = 0; i < pwdLength; i++) {
-    let numberSelection = Math.floor(Math.random() * characters.length);
-
-    password += characters[numberSelection];
+function showPassword() {
+  function generatePassword() {
+    let password = "";
+    for (i = 0; i < pwdLength; i++) {
+      let numberSelection = Math.floor(Math.random() * characters.length);
+      password += characters[numberSelection];
+    }
+    return password;
   }
-  let showPwdOne = document.querySelector("#pwd-one");
-  showPwdOne.innerHTML = password;
+  let showPwdOne = (document.querySelector("#pwd-one").textContent =
+    generatePassword());
+  let showPwdTwo = (document.querySelector("#pwd-two").textContent =
+    generatePassword());
+
+  {
+    showPwdOne;
+    showPwdTwo;
+  }
 }
-
-// let showPwdOne = document.querySelector("#pwd-one");
-// showPwdOne.innerHTML = generatePassword();
-
-// console.log(generatePassword());
