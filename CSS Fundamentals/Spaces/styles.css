@@ -1,0 +1,18 @@
+
+body{
+font-family: 'Roboto';
+  margin: 0 auto;
+}
+
+header{
+padding-top: 20px;
+  background-color: #181818;
+  color:whitesmoke
+}
+
+.title{
+
+
+  font-weight: 700;
+  font-size: 40px;
+}

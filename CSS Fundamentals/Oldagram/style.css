@@ -1,0 +1,45 @@
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+main{
+width: 400px;
+  border: 2px solid rgb(49, 12, 199);
+}
+header{
+font-family: 'Engagement', cursive;
+font-size: 50px;
+  border-bottom: 1px solid rgba(233, 232, 232, 0.891);
+  padding: 10px;
+}
+
+.container{
+
+ width: 350px;
+  padding: 10px 5px;
+
+
+ 
+}
+
+.img-post{
+width: 400px;
+margin: 0;
+
+}
+
+.sec-one, section{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+margin: 0;
+
+
+}
+
+.avatar{
+border-radius: 50%;
+padding-right: 10px;
+
+}
