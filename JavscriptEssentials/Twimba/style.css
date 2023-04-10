@@ -1,0 +1,38 @@
+main, header{
+
+width: 290px;
+  margin: 0 auto;
+}
+
+
+.profile-pic{
+
+  border-radius: 50%;
+}
+
+button {
+  background-color: #1DA1F2;
+  border: none;
+  color: white;
+  padding: 10px 19px;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+textarea{
+ width: 239px;
+ height: 60px;
+ margin: 0px;
+ padding: 5px;
+ margin-bottom: 10px;
+ resize: none;
+}
+
+
+.fa-solid{
+
+  color: #999;
+}
