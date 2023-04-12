@@ -1,3 +1,6 @@
+// import { v4 as uuidv4 } from "uuid";
+// uuidv4();
+
 const tweetsData = [
   {
     handle: `@TrollBot66756542 💎`,
@@ -57,13 +60,7 @@ const tweetsData = [
   },
 ];
 
-let tweetBtn = document.getElementById("tweet-btn");
-let tweetInput = document.getElementById("tweet-input");
 let tweetFeed = document.getElementById("tweet-feed");
-
-tweetBtn.addEventListener("click", function () {
-  console.log(tweetInput.value);
-});
 
 document.addEventListener("click", function (e) {
   if (e.target.dataset.heart) {
@@ -75,6 +72,9 @@ document.addEventListener("click", function (e) {
   }
   if (e.target.dataset.retweet) {
     handleRetweet(e.target.dataset.retweet);
+  }
+  if (e.target.id === "tweet-btn") {
+    handleTweetBtn();
   }
 });
 
@@ -106,25 +106,28 @@ function handleRetweet(tweetId) {
   renderFeed();
 }
 
-function handleReplies(tweetId) {
-  const repliesObj = tweetsData.filter(function (replies) {
-    return replies.uuid === tweetId;
-  })[0];
+function handleReplies(replyId) {
+  document.getElementById(`replies-${replyId}`).classList.toggle("hidden");
+}
 
-  if (repliesObj.replies.length > 0) {
-    console.log(repliesObj.uuid);
+function handleTweetBtn() {
+  let tweetInput = document.getElementById("tweet-input");
 
-    repliesObj.replies.forEach(function () {
-      repliesHtml += `<div class="tweet-reply">
-    <div class="tweet-inner">
-        <img src=${profilePic}" class="profile-pic">
-            <div>
-                <p class="handle">${handle}</p>
-                <p class="tweet-text">${tweetText}</p>
-            </div>
-        </div>
-</div>`;
+  if (tweetInput.value) {
+    tweetsData.unshift({
+      handle: "Greatness",
+      profilePic: `images/scrimbalogo.png`,
+      likes: 0,
+      retweets: 0,
+      tweetText: tweetInput.value,
+      replies: [],
+      isLiked: false,
+      isRetweeted: false,
+      uuid: "${ new uuid goes here}",
     });
+
+    renderFeed();
+    tweetInput.value = "";
   }
 }
 
@@ -138,8 +141,25 @@ function getFeedHTML() {
     if (tweet.isLiked) {
       likeHeart = "liked";
     }
+
     if (tweet.isRetweeted) {
       iconShare = "retweeted";
+    }
+
+    let repliesHtml = "";
+
+    if (tweet.replies.length > 0) {
+      tweet.replies.forEach(function (reply) {
+        repliesHtml += `<div class="tweet-reply">
+            <div class="tweet-inner">
+            <img src=${reply.profilePic}" class="profile-pic">
+            <div>
+            <p class="handle">${reply.handle}</p>
+            <p class="tweet-text">${reply.tweetText}</p>
+            </div>
+            </div>
+            </div>`;
+      });
     }
 
     HTMLfeed += `
@@ -165,8 +185,9 @@ function getFeedHTML() {
             </div>   
         </div>            
     </div>
-     <div id="replies-${tweet.uuid}">
-        ${repliesHtml}
+     <div class="hidden display" id="replies-${tweet.uuid}">
+     ${repliesHtml}
+</div>
 </div>`;
   });
   return HTMLfeed;
@@ -177,3 +198,5 @@ function renderFeed() {
 }
 
 renderFeed();
+
+console.log(uuidv4);

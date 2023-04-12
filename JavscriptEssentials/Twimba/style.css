@@ -47,3 +47,8 @@ textarea{
 
   color: #1DA1F2;
 }
+
+
+.hidden{
+  display: none;
+}
