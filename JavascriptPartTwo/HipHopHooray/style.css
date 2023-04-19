@@ -1,0 +1,74 @@
+.container{
+  margin-top: 1rem;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+padding: 0px 20px;
+background-color: rgb(255, 255, 255);
+max-width: 50%;
+
+}
+
+
+.top-icons
+{
+  display: flex;
+    justify-content: space-between;
+    padding:25px 30px;
+color: rgb(107, 103, 103);
+
+}
+
+.select-icons {
+ display:flex;
+  font-size: 30px; 
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+  
+
+}
+
+
+.fa-heart, .fa-microphone-lines{
+padding: 15px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+    max-width: 60px;
+      max-height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+
+}
+
+.fa-heart{
+
+color:rgb(28, 29, 28)
+
+}
+
+.fa-microphone-lines{
+
+color: rgb(56, 56, 56);
+  border-radius: 50%;
+font-style: 20px;}
+
+
+.fa-microphone-lines:hover,
+.fa-heart:hover {
+background-color: rgb(28, 29, 28);
+  color: rgb(255, 255, 255);
+  border-radius: 45%;
+}
+
+.photo{
+display: flex;
+
+max-width:100%;
+justify-content: center;
+border-radius: 20px;
+opacity: .8;
+}
+
+
