@@ -1,8 +1,14 @@
+@font-face {
+  font-family:'Visby' ;
+  src: url(Demo_Fonts/Fontspring-DEMO-visbycf-bold.otf);
+}
+
+
+
 .container{
   margin-top: 1rem;
  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 border-radius: 10px;
-  color: rgb(255, 255, 255);
   margin-left: 10px;
 padding: 0px 20px;
 background-color: rgb(255, 255, 255);
@@ -22,15 +28,15 @@ color: rgb(107, 103, 103);
 
 .select-icons {
  display:flex;
-  font-size: 30px; 
+  font-size: 20px; 
   justify-content: space-evenly;
   padding-bottom: 30px;
-  
+  align-items: baseline;
 
 }
 
 
-.fa-heart, .fa-microphone-lines{
+.fa-forward-fast, .fa-pause{
 padding: 15px;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
@@ -42,33 +48,94 @@ padding: 15px;
 
 }
 
-.fa-heart{
+.fa-radio{
+font-size: 30px;
+  cursor: pointer;
+  color: rgb(19, 18, 18);
+
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+}
+
+.fa-forward-fast{
 
 color:rgb(28, 29, 28)
 
 }
 
-.fa-microphone-lines{
+.fa-pause{
 
 color: rgb(56, 56, 56);
   border-radius: 50%;
 font-style: 20px;}
 
 
-.fa-microphone-lines:hover,
-.fa-heart:hover {
+.fa-pause:hover,
+.fa-forward-fast:hover {
 background-color: rgb(28, 29, 28);
   color: rgb(255, 255, 255);
   border-radius: 45%;
+  box-shadow: 0 5px 15px rgb(0, 0, 0);
 }
 
 .photo{
 display: flex;
-
 max-width:100%;
+
 justify-content: center;
 border-radius: 20px;
 opacity: .8;
 }
 
 
+
+.rating-text{
+/* display: none; */
+
+font-size: 1.5rem;
+font-family: 'Visby';
+font-weight: 800;
+
+}
+
+
+.text-overlay{
+  max-width: 350px;
+position:relative;
+bottom:120px;
+margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+font-size: 1rem;
+color: rgb(20, 19, 19);
+
+
+
+}
+
+.name{
+
+font-size: 2rem;
+font-weight: 800;
+}
+
+.classic ,
+.underrated {
+  border: 3px solid rgb(224, 204, 7);;
+  font-family: 'visby';
+  text-transform: uppercase;
+position: absolute;
+top:150px;
+  font-size: 52px;
+  background-image: rgb(224, 204, 7);
+    background: linear-gradient(96deg, rgba(224, 204, 7, 1) 0%, rgba(255, 192, 0, 1) 35%, rgba(255, 246, 0, 1) 100%);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  padding: 20px;
+  margin-left: 20px;
+
+}
