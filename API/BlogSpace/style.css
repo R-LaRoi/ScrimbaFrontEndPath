@@ -1,0 +1,92 @@
+body{
+
+  margin: 0;
+  background-color:#f3f3f3;
+}
+
+
+nav{
+  padding: 30px;
+text-align: right;
+  height:50px;
+background-color: #f3f3f3;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+font-size: 3rem;
+font-family: 'Chonburi', cursive;
+color:#3A4F78;
+}
+
+section{
+margin-left: 10px;
+margin-right:10px;
+margin-top: 30px;
+display:grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap:20px;
+
+
+}
+
+.card{
+
+  border-radius: 10px;
+  padding: 20px;
+  border: 10px;
+  color: rgb(239, 239, 239);
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+background-color:#3A4F78;
+font-family: 'Times New Roman', Times, serif;
+line-height:1.2;
+
+
+}
+
+.card:hover{
+background-color: #3a4f78b0;
+
+}
+
+h4{
+font-family: 'Chonburi', cursive;
+  text-transform: capitalize;
+}
+
+
+.blog-post{
+display: flex;
+  flex-direction: column;
+  padding: 40px;
+align-items: center;
+justify-content: space-between;
+background-color: rgb(255, 255, 255);
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+textarea{
+  
+outline: #6b80aa;
+border:2px solid #3a4f7894;
+border-radius: 20px;
+  width: 700px;
+  max-width: 900px;
+  padding: 40px;
+  margin-left: 10px;
+}
+
+button, 
+label{
+
+  margin-top: 10px;
+}
+
+button{
+
+  background-color: #3A4F78; 
+  color:whitesmoke;
+  border-radius: 5px;
+  padding: 15px;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
