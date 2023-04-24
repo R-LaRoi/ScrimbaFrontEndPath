@@ -1,0 +1,27 @@
+section{
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: 'Poppins'; 
+background-color: rgb(28, 28, 28);
+  box-shadow: 0px 3px 12px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  width: 600px;
+  
+}
+
+
+button{
+width: 300px;
+  margin-bottom: 20px;
+}
+
+div.card-slot {
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 5px;
+  height: 120px;
+  width: calc(120px * 5 / 7);
+  margin-bottom: 10px;
+}

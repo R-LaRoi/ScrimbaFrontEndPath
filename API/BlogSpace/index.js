@@ -1,4 +1,7 @@
 let fivePost = [];
+const entryInput = document.getElementById("post-entry");
+const titleInput = document.getElementById("blog-title");
+const form = document.getElementById("form-submit");
 
 function showBlogHtml() {
   let postHTML = "";
@@ -19,18 +22,16 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts", { method: "GET" })
   });
 
 // Storing the user input and created an object to send to API
-
-document.getElementById("form-submit").addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const blogEntry = document.getElementById("post-entry").value;
-  const blogTitle = document.getElementById("blog-title").value;
+  const blogEntry = entryInput.value;
+  const blogTitle = titleInput.value;
 
   const blogData = {
     title: blogTitle,
     body: blogEntry,
   };
-  //
-  //
+
   // Sends a request to API using the POST method, renders new post in DOM
 
   const method = {
@@ -48,5 +49,10 @@ document.getElementById("form-submit").addEventListener("submit", (e) => {
 
       fivePost.unshift(post);
       showBlogHtml();
+      form.reset();
+
+      // Alternative way to reset the form:
+      // titleInput.value = "";
+      // entryInput.value = "";
     });
 });
