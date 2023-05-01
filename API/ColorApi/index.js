@@ -1,8 +1,15 @@
-document.getElementById("color-section");
+document.getElementById("color-scheme").addEventListener("click", getColor);
 
-function getColors() {
-  let colorInput = document.getElementById("color-input").value;
-  console.log(colorInput);
+function getColor() {
+  const hex = document.getElementById("pick-color").value.slice(1);
+  const mode = document.getElementById("mode").value;
+
+  fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&${mode}`)
+    .then((response) => response.json())
+    .then(
+      (data) =>
+        (document.getElementById(
+          "show-color"
+        ).innerHTML = `<img class="scheme" src="${data.image.named}" >`)
+    );
 }
-
-document.getElementById("get-color").addEventListener("click", getColors);

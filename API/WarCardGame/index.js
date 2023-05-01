@@ -1,3 +1,5 @@
+let deckId;
+
 document.getElementById("draw-card").addEventListener("click", () => {
   handleClick;
 });
